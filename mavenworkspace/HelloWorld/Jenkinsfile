@@ -1,7 +1,7 @@
 node{
     stage('SCM Checkout'){
         
-        gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingassignmentmavenfreestyle
+        git 'https://gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingassignmentmavenfreestyle.git'
     }
     stage('Compile-Package'){
         //Get maven home path
