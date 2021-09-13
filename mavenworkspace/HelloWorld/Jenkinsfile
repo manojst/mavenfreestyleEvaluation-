@@ -4,6 +4,9 @@ node{
         
         git 'https://gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingassignmentmavenfreestyle.git'
     }
+    withMaven{
+      sh "mvn clean verify"
+    }
     stage('read POM'){
         readpom = readFile 'mavenworkspace/HelloWorld/pom.xml';
         //dev artifactversion = readpom.version;
