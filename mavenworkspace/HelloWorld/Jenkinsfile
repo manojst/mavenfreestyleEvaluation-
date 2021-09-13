@@ -13,6 +13,6 @@ node{
         //Get maven home path
         //def mavenHome = tool name: 'maven', type: 'maven'
         //sh "${mavenHome}/bin/mvn package"
-        sh "mvn package"
+        sh "maven package"
     }
 }
