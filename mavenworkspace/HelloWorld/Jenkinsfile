@@ -5,7 +5,7 @@ node{
         git 'https://gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingassignmentmavenfreestyle.git'
     }
     stage('read POM'){
-        readpom = readFile: 'mavenworkspace/HelloWorld/pom.xml';
+        readpom = readFile 'mavenworkspace/HelloWorld/pom.xml';
         //dev artefactversion = readpom.version;
         //echo "The version of artifact is - ${artefactversion}"
     }
