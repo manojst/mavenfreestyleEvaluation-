@@ -10,6 +10,6 @@ node{
     stage('Compile-Package'){
         //Get maven home path
         def mavenHome = tool name: 'maven', type: 'maven'
-        sh "cd ${WORKSPACE}/; ${mavenHome}/bin/mvn package"        
+        sh "cd ${WORKSPACE}/mavenworkspace/HelloWorld; ${mavenHome}/bin/mvn package"        
     }
 }
