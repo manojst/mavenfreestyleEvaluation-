@@ -6,8 +6,8 @@ node{
     }
     stage('read POM'){
         readpom = readFile 'mavenworkspace/HelloWorld/pom.xml';
-        dev artifactversion = readpom.version;
-        echo "The version of artifact is - ${artifactversion}"
+        //dev artifactversion = readpom.version;
+        //echo "The version of artifact is - ${artifactversion}"
     }
     stage('Compile-Package'){
         //Get maven home path
