@@ -12,6 +12,6 @@ node{
     stage('Validate'){
         //Get maven home path
         def mavenHome = tool name: 'maven', type: 'maven'
-        sh "${mavenHome}/bin/mvn validate"        
+        sh "/${mavenHome}/bin/mvn validate"        
     }
 }
