@@ -1,8 +1,11 @@
 node{
     stage('SCM Checkout'){
+        
         gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingassignmentmavenfreestyle
     }
     stage('Compile-Package'){
-        sh 'mvn package'
+        //Get maven home path
+        def mvnHome = tool name: 'maven', type: 'maven'
+        sh "${mvnHome}/bin/mvn package"
     }
 }
