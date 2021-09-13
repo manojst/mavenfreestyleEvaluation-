@@ -9,9 +9,9 @@ node{
         //dev artefactversion = readpom.version;
         //echo "The version of artifact is - ${artefactversion}"
     }
-    stage('Compile-Package'){
+    stage('Validate'){
         //Get maven home path
         def mavenHome = tool name: 'maven', type: 'maven'
-        sh "${mavenHome}/bin/mvn package"        
+        sh "${mavenHome}/bin/mvn validate"        
     }
 }
