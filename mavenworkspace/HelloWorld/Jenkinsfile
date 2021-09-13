@@ -11,7 +11,7 @@ node{
     }
     stage('Compile-Package'){
         //Get maven home path
-        sh 'mvn archetype:generate -B ' +
+        sh 'maven archetype:generate -B ' +
       '-DarchetypeGroupId=org.apache.maven.archetypes ' +
       '-DarchetypeArtifactId=maven-archetype-quickstart ' +
       '-DgroupId=com.trainingMaven -DartifactId=HelloWorld'
