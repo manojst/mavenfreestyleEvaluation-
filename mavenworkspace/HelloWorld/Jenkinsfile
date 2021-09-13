@@ -11,6 +11,10 @@ node{
     }
     stage('Compile-Package'){
         //Get maven home path
+        sh 'mvn archetype:generate -B ' +
+      '-DarchetypeGroupId=org.apache.maven.archetypes ' +
+      '-DarchetypeArtifactId=maven-archetype-quickstart ' +
+      '-DgroupId=com.trainingMaven -DartifactId=HelloWorld'
         def mavenHome = tool name: 'maven', type: 'maven'
         sh "${mavenHome}/bin/mvn package"
     }
