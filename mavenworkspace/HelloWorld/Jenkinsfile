@@ -1,0 +1,8 @@
+node{
+    stage('SCM Checkout'){
+        gitlab.training.dagility.com/manojkumar_gnanasekaran/dagilitytrainingassignmentmavenfreestyle
+    }
+    stage('Compile-Package'){
+        sh 'mvn package'
+    }
+}
