@@ -6,12 +6,10 @@ node{
     }
     stage('read POM'){
         readpom = readFile 'mavenworkspace/HelloWorld/pom.xml';
-        //dev artefactversion = readpom.version;
-        //echo "The version of artifact is - ${artefactversion}"
     }
-    stage('Validate'){
+    stage('Compile-Package'){
         //Get maven home path
         def mavenHome = tool name: 'maven', type: 'maven'
-        sh "/${mavenHome}/bin/mvn validate"        
+        sh "${mavenHome}/bin/mvn package"        
     }
 }
