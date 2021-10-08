@@ -30,4 +30,5 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "HelloWorld-1.0-SNAPSHOT.jar"]
 
 CMD /bin/sh
-
+RUN usermod -a -G docker jenkins
+USER jenkins
