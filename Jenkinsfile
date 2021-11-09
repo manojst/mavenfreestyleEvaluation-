@@ -6,13 +6,6 @@ pipeline {
         }
     }
 
-    options {
-        buildDiscarder logRotator( 
-                    daysToKeepStr: '16', 
-                    numToKeepStr: '10'
-            )
-    }
-
     stages {
         
         stage('Cleanup Workspace') {
@@ -29,7 +22,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM', 
                     branches: [[name: '*/main']], 
-                    userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
+                    userRemoteConfigs: [[url: 'https://gitlab.training.dagility.com/manojkumar_gnanasekaran/mavenfreestyleevaluation.git']]
                 ])
             }
         }
